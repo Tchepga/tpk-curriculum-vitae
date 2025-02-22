@@ -28,36 +28,37 @@ const activities: {
         title: 'Membre du collectif Mongulu',
         link: 'https://www.mongulu.cm/',
         description:
-          'Participation active au sein du collectif Mongulu, une communauté tech africaine',
+          'Participation active au sein du collectif Mongulu, une communauté tech camerounaise. Mise en place des solutions digitales principale dans le domaine associatif.',
       },
       en: {
         title: 'Member of Mongulu Collective',
         link: 'https://www.mongulu.cm/',
-        description: 'Active participation in the Mongulu collective, an African tech community',
+        description:
+          'Active participation in the Mongulu collective, an African tech community. Requirements analysis and stakeholder coordination for technical solution implementation.',
       },
     },
     {
       fr: {
         title: 'Responsable technique Tawatawa',
         link: 'https://tawatawa.net',
-        description: 'Gestion et développement de la plateforme Tawatawa',
+        description: 'Plateforme de livraison et suivi des commandes de la société Tawa Delivery.',
       },
       en: {
         title: 'Technical Lead at Tawatawa',
         link: 'https://tawatawa.net',
-        description: 'Management and development of the Tawatawa platform',
+        description: 'Platform for delivery and order tracking of the Tawa Delivery company.',
       },
     },
     {
       fr: {
         title: 'Responsable technique Manage Invoice',
         link: 'https://manage-invoice.devcoorp.net/',
-        description: 'Développement et maintenance de la solution de gestion de factures',
+        description: 'Développement et maintenance de la solution de gestion de factures.',
       },
       en: {
         title: 'Technical Lead at Manage Invoice',
         link: 'https://manage-invoice.devcoorp.net/',
-        description: 'Development and maintenance of the invoice management solution',
+        description: 'Development and maintenance of the invoice management solution.',
       },
     },
   ],

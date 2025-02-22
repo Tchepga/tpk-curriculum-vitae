@@ -1,7 +1,7 @@
 <template>
   <section class="experience">
-    <h2>Expérience professionnelle</h2>
-    <div class="experience-item" v-for="(job, index) in jobs" :key="index">
+    <h2>{{ t('experience.title') }}</h2>
+    <div class="experience-item" v-for="(job, index) in localizedJobs" :key="index">
       <div class="job-header">
         <h3>{{ job.title }}</h3>
         <div class="period-info">
@@ -14,14 +14,14 @@
       <p class="description">{{ job.description }}</p>
 
       <div v-if="job.responsibilities" class="responsibilities">
-        <h4>Responsabilités :</h4>
+        <h4>{{ t('experience.responsibilities') }}</h4>
         <ul>
           <li v-for="(resp, idx) in job.responsibilities" :key="idx">{{ resp }}</li>
         </ul>
       </div>
 
       <div v-if="job.keywords" class="keywords">
-        <h4>Mots-clés :</h4>
+        <h4>{{ t('experience.keywords') }}</h4>
         <div class="keyword-list">
           <span v-for="(keyword, idx) in job.keywords" :key="idx" class="keyword">
             {{ keyword }}
@@ -30,7 +30,7 @@
       </div>
 
       <div class="tech-stack" v-if="job.technologies">
-        <h4>Environnement technique :</h4>
+        <h4>{{ t('experience.environment') }}</h4>
         {{ job.technologies }}
       </div>
     </div>
@@ -38,75 +38,177 @@
 </template>
 
 <script setup lang="ts">
-const jobs = [
+import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
+
+const { t, locale } = useI18n()
+
+type Language = 'fr' | 'en'
+
+interface JobContent {
+  title: string
+  company: string
+  period: string
+  description: string
+  responsibilities: string[]
+  keywords: string[]
+  technologies: string
+  sector: string
+  duration?: string
+}
+interface Job {
+  fr: JobContent
+  en: JobContent
+}
+
+const jobs: Job[] = [
   {
-    title: 'Développeur full-stack php/angular',
-    company: 'Luxair, Munsbach',
-    period: 'nov. 2021 - présent',
-    description:
-      'Le poste consiste à maintenir plusieurs applications web de la compagnie et de rajouter de nouvelles fonctions définies par le chef de projet.',
-    responsibilities: [
-      'Implémentation et intégration de composants Figma',
-      "Implémentation et intégration d'API",
-      'Analyse et revue des exigences des parties prenantes',
-      'Support et revue des tickets',
-      'Gestion des releases',
-    ],
-    keywords: ['Monorepo', 'web hook', 'web component', 'approche DDD', 'scripting'],
-    technologies: 'Angular 12+, Node.js, TypeScript, Nx, Drupal, PHP 7.2+, Azure DevOps, GitLab',
-    sector: 'Public, transport',
+    fr: {
+      title: 'Développeur full-stack php/angular',
+      company: 'Luxair, Munsbach',
+      period: 'nov. 2021 - présent',
+      description:
+        'Le poste consiste à maintenir plusieurs applications web de la compagnie et de rajouter de nouvelles fonctions définies par le chef de projet.',
+      responsibilities: [
+        'Intégration et mise en œuvre des web components',
+        'Migration des composants vers des librairies modernes',
+        "Intégration et mise en œuvre d'API",
+        'Analyse et revue des tickets',
+        'Gestion des mises en production',
+      ],
+      keywords: ['Monorepo', 'web hook', 'web component', 'approche DDD', 'scripting'],
+      technologies: 'Angular 12+, Node.js, TypeScript, Nx, Drupal, PHP 7.2+, Azure DevOps, GitLab',
+      sector: 'Public, transport',
+    },
+    en: {
+      title: 'Full-stack php/angular developer',
+      company: 'Luxair, Munsbach',
+      period: 'nov. 2021 - present',
+      description:
+        'The position consists of maintaining several web applications of the company and adding new functions defined by the project manager.',
+      responsibilities: [
+        'Integration and implementation of web components',
+        'Migration of components to modern libraries',
+        'Integration and implementation of APIs',
+        'Analysis and review of tickets',
+        'Production management',
+      ],
+      keywords: ['Monorepo', 'web hook', 'web component', 'approche DDD', 'scripting'],
+      technologies: 'Angular 12+, Node.js, TypeScript, Nx, Drupal, PHP 7.2+, Azure DevOps, GitLab',
+      sector: 'Public, transport',
+    },
   },
   {
-    title: 'Développeur Java',
-    company: 'Ministère des Transports / CTE (Tachygraphe)',
-    period: 'Mars 2021 - Octobre 2021',
-    duration: '150H/J',
-    description:
-      "Au sein d'une équipe de 4 personnes, développement d'une application pour le Ministère des Transports du Luxembourg sous contrat à prix fixe. L'application gère les cartes de tachygraphe utilisées dans le transport de marchandises et de passagers.",
-    responsibilities: [
-      'Analyse et développement back-end avec Java 8',
-      'Analyse et développement front-end avec Vue.js en TypeScript',
-      'Développement de services Web REST et SOAP',
-      'Création et configuration de modules Maven',
-      'Tests fonctionnels',
-    ],
-    technologies: 'VUE-JS, Maven, Java 8, REST, SOAP, DB2, Gitlab',
-    sector: 'Public, transport',
+    fr: {
+      title: 'Développeur Java',
+      company: 'Ministère des Transports / CTE (Tachygraphe)',
+      period: 'Mars 2021 - Octobre 2021',
+      duration: '150H/J',
+      description:
+        "Au sein d'une équipe de 4 personnes, développement d'une application pour le Ministère des Transports du Luxembourg sous contrat à prix fixe. L'application gère les cartes de tachygraphe utilisées dans le transport de marchandises et de passagers.",
+      responsibilities: [
+        'Analyse et développement back-end avec Java 8',
+        'Analyse et développement front-end avec Vue.js en TypeScript',
+        'Développement de services Web REST et SOAP',
+        'Création et configuration de modules Maven',
+        'Tests fonctionnels',
+      ],
+      technologies: 'VUE-JS, Maven, Java 8, REST, SOAP, DB2, Gitlab',
+      sector: 'Public, transport',
+    },
+    en: {
+      title: 'Java developer',
+      company: 'Ministry of Transport / CTE (Tachygraphe)',
+      period: 'Mars 2021 - Octobre 2021',
+      duration: '150H/J',
+      description:
+        'In a team of 4 people, development of an application for the Ministry of Transport of Luxembourg under a fixed price contract. The application manages the tachygraphe cards used in the transport of goods and passengers.',
+      responsibilities: [
+        'Analysis and development of back-end with Java 8',
+        'Analysis and development of front-end with Vue.js in TypeScript',
+        'Development of Web REST and SOAP services',
+        'Creation and configuration of Maven modules',
+        'Functional tests',
+      ],
+      technologies: 'VUE-JS, Maven, Java 8, REST, SOAP, DB2, Gitlab',
+      sector: 'Public, transport',
+    },
   },
   {
-    title: 'Développeur Junior Python',
-    company: 'LDE - Poplab',
-    period: 'Juin 2020 - Mars 2021',
-    duration: '180H/J',
-    description:
-      "Au sein d'une équipe de 7 personnes, développement en mode Agile d'une application d'assistance pédagogique pour les écoles primaires et secondaires, ainsi qu'une application de gestion et de partage de documents numériques.",
-    responsibilities: [
-      'Analyse et développement back-end avec Python 3',
-      'Analyse et développement front-end avec Vue.js en JavaScript',
-      'Développement de services Web REST',
-      'Tests fonctionnels avec Django Test',
-      "Tests d'intégration avec Selenium",
-    ],
-    technologies: 'Python 3, Django, Selenium, Vuejs, Postgres',
-    sector: 'Éducation',
+    fr: {
+      title: 'Développeur Junior Python',
+      company: 'LDE - Poplab',
+      period: 'Juin 2020 - Mars 2021',
+      duration: '180H/J',
+      description:
+        "Au sein d'une équipe de 7 personnes, développement en mode Agile d'une application d'assistance pédagogique pour les écoles primaires et secondaires, ainsi qu'une application de gestion et de partage de documents numériques.",
+      responsibilities: [
+        'Analyse et développement back-end avec Python 3',
+        'Analyse et développement front-end avec Vue.js en JavaScript',
+        'Développement de services Web REST',
+        'Tests fonctionnels avec Django Test',
+        "Tests d'intégration avec Selenium",
+      ],
+      technologies: 'Python 3, Django, Selenium, Vuejs, Postgres',
+      sector: 'Éducation',
+    },
+    en: {
+      title: 'Junior Python developer',
+      company: 'LDE - Poplab',
+      period: 'Juin 2020 - Mars 2021',
+      duration: '180H/J',
+      description:
+        'In a team of 7 people, development in Agile mode of an educational assistance application for primary and secondary schools, as well as an application for managing and sharing digital documents.',
+      responsibilities: [
+        'Analysis and development of back-end with Python 3',
+        'Analysis and development of front-end with Vue.js in JavaScript',
+        'Development of Web REST services',
+        'Functional tests with Django Test',
+        'Integration tests with Selenium',
+      ],
+      technologies: 'Python 3, Django, Selenium, Vuejs, Postgres',
+      sector: 'Education',
+    },
   },
   {
-    title: 'Stagiaire Développeur C++',
-    company: 'DeltaCAD - DeltaMesh',
-    period: 'Septembre 2019 - Février 2020',
-    duration: '120 H/J',
-    description:
-      "Stage réalisé dans le cadre du Master en ingénierie logicielle au sein d'une équipe de 4 personnes. Intégration d'une bibliothèque C++ pour le maillage 3D et implémentation d'un visualiseur d'objets 3D.",
-    responsibilities: [
-      'Revue de la littérature sur les outils de maillage 3D existants',
-      'Développement de plugins pour les algorithmes de maillage',
-      "Implémentation de l'interface utilisateur (UI)",
-      'Optimisation algorithmique',
-    ],
-    technologies: 'C++, QT, Python, Paraview, CMake, SVN',
-    sector: 'Industriel',
+    fr: {
+      title: 'Stagiaire Développeur C++',
+      company: 'DeltaCAD - DeltaMesh',
+      period: 'Septembre 2019 - Février 2020',
+      duration: '120 H/J',
+      description:
+        'Internship realized in the framework of the Master in software engineering in a team of 4 people. Integration of a C++ library for 3D meshing and implementation of a 3D object viewer.',
+      responsibilities: [
+        'Revue de la littérature sur les outils de maillage 3D existants',
+        'Development of plugins for the mesh algorithms',
+        'Implementation of the UI',
+        'Algorithm optimization',
+      ],
+      technologies: 'C++, QT, Python, Paraview, CMake, SVN',
+      sector: 'Industrial',
+    },
+    en: {
+      title: 'C++ developer intern',
+      company: 'DeltaCAD - DeltaMesh',
+      period: 'September 2019 - February 2020',
+      duration: '120 H/J',
+      description:
+        'Internship realized in the framework of the Master in software engineering in a team of 4 people. Integration of a C++ library for 3D meshing and implementation of a 3D object viewer.',
+      responsibilities: [
+        'Review of the literature on existing 3D meshing tools',
+        'Development of plugins for the mesh algorithms',
+        'Implementation of the UI',
+        'Algorithm optimization',
+      ],
+      technologies: 'C++, QT, Python, Paraview, CMake, SVN',
+      sector: 'Industrial',
+    },
   },
 ]
+
+const localizedJobs = computed(() => {
+  return jobs.map((job) => job[locale.value as Language])
+})
 </script>
 
 <style scoped>

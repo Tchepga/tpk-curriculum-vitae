@@ -32,6 +32,8 @@
   },
   "experience": {
     "title": "Expérience professionnelle",
+    "responsibilities": "Responsabilités",
+    "keywords": "Mots-clés",
     "environment": "Environnement technique",
     "jobs": {
       "luxair": {
@@ -89,5 +91,9 @@
         "spain": "Espagne"
       }
     }
+  },
+  "education": {
+    "title": "Formation",
+    "specializations": "Spécialisations"
   }
 }

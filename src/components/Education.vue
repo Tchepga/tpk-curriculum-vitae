@@ -1,29 +1,63 @@
 <script setup lang="ts">
-const education = [
+import { useI18n } from 'vue-i18n'
+
+const { t, locale } = useI18n()
+
+type Language = 'fr' | 'en'
+
+interface EducationContent {
+  title: string
+  school: string
+  period?: string
+  specializations?: string[]
+}
+
+interface Education {
+  fr: EducationContent
+  en: EducationContent
+}
+
+const education: Education[] = [
   {
-    title: 'Master en Ingénierie Informatique',
-    school: 'Université de Technologie de Belfort-Montbéliard (UTBM)',
-    specializations: ['Ingénierie des Logiciels et des Connaissances', 'Réalité Virtuelle'],
+    fr: {
+      title: 'Master en Ingénierie Informatique',
+      school: 'Université de Technologie de Belfort-Montbéliard (UTBM)',
+      specializations: ['Ingénierie des Logiciels et des Connaissances', 'Réalité Virtuelle'],
+    },
+    en: {
+      title: 'Master in Computer Engineering',
+      school: 'University of Technology of Belfort-Montbéliard (UTBM)',
+      specializations: ['Software Engineering and Knowledge Engineering', 'Virtual Reality'],
+    },
   },
   {
-    title: 'Classes Préparatoires aux Grandes Écoles',
-    school: 'Université Institut de la Côte, Douala, Cameroun',
-    period: 'Septembre 2013 - Mars 2016',
+    fr: {
+      title: 'Classes Préparatoires aux Grandes Écoles',
+      school: 'Université Institut de la Côte, Douala, Cameroun',
+      period: 'Septembre 2013 - Mars 2016',
+    },
+    en: {
+      title: 'Preparatory Classes for Engineering Schools',
+      school: 'University Institute of the Coast, Douala, Cameroon',
+      period: 'September 2013 - March 2016',
+    },
   },
 ]
 </script>
 
 <template>
   <section class="education">
-    <h2>Formation</h2>
+    <h2>{{ t('education.title') }}</h2>
     <div class="education-item" v-for="(edu, index) in education" :key="index">
-      <h3>{{ edu.title }}</h3>
-      <div class="school">{{ edu.school }}</div>
-      <div v-if="edu.period" class="period">{{ edu.period }}</div>
-      <div v-if="edu.specializations" class="specializations">
-        <h4>Spécialisations :</h4>
+      <h3>{{ edu[locale as Language].title }}</h3>
+      <div class="school">{{ edu[locale as Language].school }}</div>
+      <div v-if="edu[locale as Language].period" class="period">
+        {{ edu[locale as Language].period }}
+      </div>
+      <div v-if="edu[locale as Language].specializations" class="specializations">
+        <h4>{{ t('education.specializations') }}</h4>
         <ul>
-          <li v-for="(spec, idx) in edu.specializations" :key="idx">
+          <li v-for="(spec, idx) in edu[locale as Language].specializations" :key="idx">
             {{ spec }}
           </li>
         </ul>
