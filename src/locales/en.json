@@ -1,0 +1,93 @@
+{
+  "personal": {
+    "title": "Personal Information",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "email": "Email Address"
+  },
+  "languages": {
+    "title": "Languages",
+    "french": {
+      "name": "French",
+      "level": "Native"
+    },
+    "english": {
+      "name": "English",
+      "level": "Fluent"
+    },
+    "italian": {
+      "name": "Italian",
+      "level": "B1"
+    },
+    "native": "Native",
+    "fluent": "Fluent",
+    "level": {
+      "b1": "B1"
+    }
+  },
+  "hobbies": {
+    "title": "Hobbies",
+    "football": "Football",
+    "videogames": "Video Games"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "environment": "Technical Environment",
+    "jobs": {
+      "luxair": {
+        "title": "Full-stack PHP/Angular Developer",
+        "company": "Luxair, Munsbach",
+        "period": "Nov 2021 - Present",
+        "description": "The position involves maintaining several company web applications and adding new features defined by the project manager."
+      },
+      "lusis": {
+        "title": "Java Developer",
+        "company": "Lusis, Roeser, Luxembourg",
+        "period": "Mar 2021 - Oct 2021",
+        "description": "The position involves setting up APIs and front-end for a taxpayer declaration and transport card management application for CTIE."
+      }
+    }
+  },
+  "header": {
+    "tagline": "Full-Stack Developer with solid experience in web application design and development, I am motivated to join a dynamic team to create innovative solutions.",
+    "jobSearch": "Seeking new opportunities to contribute to innovative projects as a Full-Stack Developer"
+  },
+  "activities": {
+    "title": "Activities",
+    "technical": {
+      "title": "Technical Activities",
+      "items": [
+        {
+          "title": "Member of Mongulu Collective",
+          "link": "https://www.mongulu.cm/",
+          "description": "Active participation in the Mongulu collective, an African tech community"
+        },
+        {
+          "title": "Technical Lead at Tawatawa",
+          "link": "https://tawatawa.net",
+          "description": "Management and development of the Tawatawa platform"
+        },
+        {
+          "title": "Technical Lead at Manage Invoice",
+          "link": "https://manage-invoice.devcoorp.net/",
+          "description": "Development and maintenance of the invoice management solution"
+        }
+      ]
+    },
+    "travel": {
+      "title": "Travels",
+      "countries": {
+        "france": "France",
+        "luxembourg": "Luxembourg",
+        "usa": "United States",
+        "ivoryCoast": "Ivory Coast",
+        "gabon": "Gabon",
+        "belgium": "Belgium",
+        "germany": "Germany",
+        "italy": "Italy",
+        "cameroon": "Cameroon",
+        "spain": "Spain"
+      }
+    }
+  }
+}

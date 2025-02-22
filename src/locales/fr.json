@@ -1,0 +1,93 @@
+{
+  "personal": {
+    "title": "Données personnelles",
+    "name": "Nom/Prénom",
+    "phone": "Numéro de téléphone",
+    "email": "Adresse e-mail"
+  },
+  "languages": {
+    "title": "Langues",
+    "french": {
+      "name": "Français",
+      "level": "Langue maternelle"
+    },
+    "english": {
+      "name": "Anglais",
+      "level": "Courant"
+    },
+    "italian": {
+      "name": "Italien",
+      "level": "B1"
+    },
+    "native": "Langue maternelle",
+    "fluent": "Courant",
+    "level": {
+      "b1": "B1"
+    }
+  },
+  "hobbies": {
+    "title": "Loisirs",
+    "football": "Football",
+    "videogames": "Jeux vidéos"
+  },
+  "experience": {
+    "title": "Expérience professionnelle",
+    "environment": "Environnement technique",
+    "jobs": {
+      "luxair": {
+        "title": "Développeur full-stack php/angular",
+        "company": "Luxair, Munsbach",
+        "period": "nov. 2021 - présent",
+        "description": "Le poste consiste à maintenir plusieurs applications web de la compagnie et de rajouter de nouvelles fonctions définies par le chef de projet."
+      },
+      "lusis": {
+        "title": "Développeur Java",
+        "company": "Lusis, Roeser, Luxembourg",
+        "period": "mars 2021 - oct. 2021",
+        "description": "Le poste consiste à mettre en place les API et le front-end pour une application de gestion de déclaration des contribuables et des cartes de transport pour le CTIE."
+      }
+    }
+  },
+  "header": {
+    "tagline": "Développeur Full-Stack avec une solide expérience dans la conception et le développement d'applications web, je suis motivé à l'idée de rejoindre une équipe dynamique pour créer des solutions innovantes.",
+    "jobSearch": "À la recherche de nouvelles opportunités pour contribuer à des projets innovants en tant que Développeur Full-Stack."
+  },
+  "activities": {
+    "title": "Activités",
+    "technical": {
+      "title": "Activités Techniques",
+      "items": [
+        {
+          "title": "Membre du collectif Mongulu",
+          "link": "https://www.mongulu.cm/",
+          "description": "Participation active au sein du collectif Mongulu, une communauté tech africaine"
+        },
+        {
+          "title": "Responsable technique Tawatawa",
+          "link": "https://tawatawa.net",
+          "description": "Gestion et développement de la plateforme Tawatawa"
+        },
+        {
+          "title": "Responsable technique Manage Invoice",
+          "link": "https://manage-invoice.devcoorp.net/",
+          "description": "Développement et maintenance de la solution de gestion de factures"
+        }
+      ]
+    },
+    "travel": {
+      "title": "Voyages",
+      "countries": {
+        "france": "France",
+        "luxembourg": "Luxembourg",
+        "usa": "États-Unis",
+        "ivoryCoast": "Côte d'Ivoire",
+        "gabon": "Gabon",
+        "belgium": "Belgique",
+        "germany": "Allemagne",
+        "italy": "Italie",
+        "cameroon": "Cameroun",
+        "spain": "Espagne"
+      }
+    }
+  }
+}
