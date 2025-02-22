@@ -8,6 +8,7 @@ type ActivityContent = {
   title: string
   link: string
   description: string
+  keywords?: string[]
 }
 
 type Activity = {

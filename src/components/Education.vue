@@ -10,6 +10,7 @@ interface EducationContent {
   school: string
   period?: string
   specializations?: string[]
+  keywords?: string[]
 }
 
 interface Education {

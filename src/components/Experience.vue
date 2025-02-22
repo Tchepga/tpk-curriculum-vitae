@@ -51,7 +51,7 @@ interface JobContent {
   period: string
   description: string
   responsibilities: string[]
-  keywords: string[]
+  keywords?: string[]
   technologies: string
   sector: string
   duration?: string
@@ -113,6 +113,7 @@ const jobs: Job[] = [
         'Création et configuration de modules Maven',
         'Tests fonctionnels',
       ],
+      keywords: [],
       technologies: 'VUE-JS, Maven, Java 8, REST, SOAP, DB2, Gitlab',
       sector: 'Public, transport',
     },
@@ -130,6 +131,7 @@ const jobs: Job[] = [
         'Creation and configuration of Maven modules',
         'Functional tests',
       ],
+      keywords: [],
       technologies: 'VUE-JS, Maven, Java 8, REST, SOAP, DB2, Gitlab',
       sector: 'Public, transport',
     },
