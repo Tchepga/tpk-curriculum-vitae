@@ -16,7 +16,7 @@ const toggleLanguage = () => {
   <div class="cv-container">
     <div class="language-switch">
       <button @click="toggleLanguage">
-        {{ locale === 'fr' ? 'English' : 'Français' }}
+        {{ locale === 'fr' ? 'FR' : 'EN' }}
       </button>
     </div>
     <header class="cv-header">

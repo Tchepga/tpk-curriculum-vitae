@@ -3,7 +3,25 @@ import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
 
-const activities = {
+type Language = 'fr' | 'en'
+type ActivityContent = {
+  title: string
+  link: string
+  description: string
+}
+
+type Activity = {
+  [key in Language]: ActivityContent
+}
+
+type TravelList = {
+  [key in Language]: string[]
+}
+
+const activities: {
+  technical: Activity[]
+  travel: TravelList
+} = {
   technical: [
     {
       fr: {
@@ -80,11 +98,11 @@ const activities = {
       <h3>{{ t('activities.technical.title') }}</h3>
       <div class="technical-activities">
         <div v-for="(activity, index) in activities.technical" :key="index" class="activity-item">
-          <h4>{{ activity[locale].title }}</h4>
-          <a :href="activity[locale].link" target="_blank" rel="noopener noreferrer">
-            {{ activity[locale].link }}
+          <h4>{{ activity[locale as Language].title }}</h4>
+          <a :href="activity[locale as Language].link" target="_blank" rel="noopener noreferrer">
+            {{ activity[locale as Language].link }}
           </a>
-          <p>{{ activity[locale].description }}</p>
+          <p>{{ activity[locale as Language].description }}</p>
         </div>
       </div>
     </div>
@@ -92,7 +110,11 @@ const activities = {
     <div class="activities-section">
       <h3>{{ t('activities.travel.title') }}</h3>
       <div class="travel-list">
-        <span v-for="(country, index) in activities.travel[locale]" :key="index" class="country">
+        <span
+          v-for="(country, index) in activities.travel[locale as Language]"
+          :key="index"
+          class="country"
+        >
           {{ country }}
         </span>
       </div>
