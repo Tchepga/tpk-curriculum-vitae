@@ -50,4 +50,10 @@ const { t } = useI18n()
   font-size: 0.9rem;
   color: var(--text-color);
 }
+
+@media print {
+  .personal-info {
+    padding: 0 !important;
+  }
+}
 </style>

@@ -51,6 +51,7 @@
     }
   },
   "header": {
+    "jobTitle": "Full-Stack Developer",
     "tagline": "Full-Stack Developer with solid experience in web application design and development, I am motivated to join a dynamic team to create innovative solutions.",
     "jobSearch": "Seeking new opportunities to contribute to innovative projects as a Full-Stack Developer"
   },
@@ -95,5 +96,9 @@
   "education": {
     "title": "Education",
     "specializations": "Specializations"
+  },
+  "printCV": {
+    "title": "Print CV",
+    "button": "Print CV"
   }
 }

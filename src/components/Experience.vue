@@ -307,4 +307,10 @@ h4 {
   color: var(--secondary-color);
   line-height: 1.6;
 }
+
+@media print {
+  .experience-item {
+    padding-bottom: 0 !important;
+  }
+}
 </style>

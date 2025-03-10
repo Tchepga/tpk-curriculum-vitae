@@ -51,6 +51,7 @@
     }
   },
   "header": {
+    "jobTitle": "Développeur Full-Stack",
     "tagline": "Développeur Full-Stack avec une solide expérience dans la conception et le développement d'applications web, je suis motivé à l'idée de rejoindre une équipe dynamique pour créer des solutions innovantes.",
     "jobSearch": "À la recherche de nouvelles opportunités pour contribuer à des projets innovants en tant que Développeur Full-Stack."
   },
@@ -95,5 +96,9 @@
   "education": {
     "title": "Formation",
     "specializations": "Spécialisations"
+  },
+  "printCV": {
+    "title": "Imprimer le CV",
+    "button": "Imprimer le CV"
   }
 }

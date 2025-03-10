@@ -10,6 +10,10 @@ const { t, locale } = useI18n()
 const toggleLanguage = () => {
   locale.value = locale.value === 'fr' ? 'en' : 'fr'
 }
+
+const printCV = () => {
+  window.print()
+}
 </script>
 
 <template>
@@ -19,9 +23,10 @@ const toggleLanguage = () => {
         {{ locale === 'fr' ? 'FR' : 'EN' }}
       </button>
     </div>
+    <button @click="printCV" class="print-cv-button">{{ t('printCV.button') }}</button>
     <header class="cv-header">
-      <h1>Tchepga Patrick</h1>
-      <h2 class="job-title">DÉVELOPPEUR FULL-STACK</h2>
+      <h1>Patrick Tchepga</h1>
+      <h2 class="job-title">{{ t('header.jobTitle') }}</h2>
       <div class="header-divider"></div>
       <p class="tagline">{{ t('header.tagline') }}</p>
     </header>
@@ -151,5 +156,42 @@ const toggleLanguage = () => {
 .language-switch button:hover {
   background-color: var(--primary-color);
   color: white;
+}
+
+.print-cv-button {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  height: min-content;
+}
+@media screen and (min-width: 768px) {
+  .print-cv-button {
+    top: 1rem;
+    right: 5rem;
+  }
+}
+
+/* Styles d'impression */
+@media print {
+  .language-switch,
+  .print-cv-button {
+    display: none !important;
+  }
+  /* Assurer que les liens sont lisibles en noir */
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+  .cv-container {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    width: 100% !important;
+  }
 }
 </style>
