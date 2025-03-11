@@ -31,7 +31,7 @@ const { t } = useI18n()
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  @media (min-width: 768px) {
+  @media (min-width: 480px) {
     flex-direction: row;
     justify-content: space-between;
   }

@@ -178,6 +178,11 @@ const printCV = () => {
 
 /* Styles d'impression */
 @media print {
+  /* Configuration de la page */
+  @page {
+    margin: 2.5cm;
+    size: A4;
+  }
   .language-switch,
   .print-cv-button {
     display: none !important;

@@ -128,6 +128,9 @@ const activities: {
 .activities {
   padding: 1rem;
   margin-top: 2rem;
+  @media print {
+    padding: 0;
+  }
 }
 
 .activities-section {
@@ -145,6 +148,9 @@ const activities: {
 .technical-activities {
   display: grid;
   gap: 1.5rem;
+  @media print {
+    gap: 0.1rem;
+  }
 }
 
 .activity-item {
