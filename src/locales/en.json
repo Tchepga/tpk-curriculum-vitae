@@ -28,7 +28,8 @@
   "hobbies": {
     "title": "Hobbies",
     "football": "Football",
-    "videogames": "Video Games"
+    "videogames": "Video Games",
+    "openSource": "Open Source"
   },
   "experience": {
     "title": "Professional Experience",
@@ -40,7 +41,7 @@
         "title": "Full-stack PHP/Angular Developer",
         "company": "Luxair, Munsbach",
         "period": "Nov 2021 - Present",
-        "description": "The position involves maintaining several company web applications and adding new features defined by the project manager."
+        "description": "The position involves maintaining several company web applications of Luxair Scrum Team and adding new features defined by the project manager."
       },
       "lusis": {
         "title": "Java Developer",
@@ -67,12 +68,12 @@
         },
         {
           "title": "Technical Lead at Tawatawa",
-          "link": "https://tawatawa.net",
-          "description": "Management and development of the Tawatawa platform"
+          "link": "https://tawadelivery.cm",
+          "description": "Platform for delivery and order tracking of the Tawa Delivery company."
         },
         {
           "title": "Technical Lead at Manage Invoice",
-          "link": "https://manage-invoice.devcoorp.net/",
+          "link": "https://manage-invoice.devcoorp.fr/",
           "description": "Development and maintenance of the invoice management solution"
         }
       ]

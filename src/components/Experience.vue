@@ -68,13 +68,13 @@ const jobs: Job[] = [
       company: 'Luxair, Munsbach',
       period: 'nov. 2021 - présent',
       description:
-        'Le poste consiste à maintenir plusieurs applications web de la compagnie et de rajouter de nouvelles fonctions définies par le chef de projet.',
+        'Le poste consiste à maintenir plusieurs applications web de l\'équipe Scrum de Luxair et de rajouter de nouvelles fonctions',
       responsibilities: [
+        'Responsable de la mise en production des applications',
         'Intégration et mise en œuvre des web components',
         'Migration des composants vers des librairies modernes',
         "Intégration et mise en œuvre d'API",
         'Analyse et revue des tickets',
-        'Gestion des mises en production',
       ],
       keywords: ['Monorepo', 'web hook', 'web component', 'approche DDD', 'scripting'],
       technologies: 'Angular 12+, Node.js, TypeScript, Nx, Drupal, PHP 7.2+, Azure DevOps, GitLab',
@@ -87,11 +87,11 @@ const jobs: Job[] = [
       description:
         'The position consists of maintaining several web applications of the company and adding new functions defined by the project manager.',
       responsibilities: [
+        'Responsible for the deployment of the applications',
         'Integration and implementation of web components',
         'Migration of components to modern libraries',
         'Integration and implementation of APIs',
         'Analysis and review of tickets',
-        'Production management',
       ],
       keywords: ['Monorepo', 'web hook', 'web component', 'approche DDD', 'scripting'],
       technologies: 'Angular 12+, Node.js, TypeScript, Nx, Drupal, PHP 7.2+, Azure DevOps, GitLab',

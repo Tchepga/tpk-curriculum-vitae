@@ -41,24 +41,24 @@ const activities: {
     {
       fr: {
         title: 'Responsable technique Tawatawa',
-        link: 'https://tawatawa.net',
+        link: 'https://tawadelivery.cm',
         description: 'Plateforme de livraison et suivi des commandes de la société Tawa Delivery.',
       },
       en: {
-        title: 'Technical Lead at Tawatawa',
-        link: 'https://tawatawa.net',
+        title: 'Technical Lead at Tawa Delivery',
+        link: 'https://tawadelivery.cm',
         description: 'Platform for delivery and order tracking of the Tawa Delivery company.',
       },
     },
     {
       fr: {
         title: 'Responsable technique Manage Invoice',
-        link: 'https://manage-invoice.devcoorp.net/',
+        link: 'https://manage-invoice.devcoorp.fr/',
         description: 'Développement et maintenance de la solution de gestion de factures.',
       },
       en: {
         title: 'Technical Lead at Manage Invoice',
-        link: 'https://manage-invoice.devcoorp.net/',
+        link: 'https://manage-invoice.devcoorp.fr/',
         description: 'Development and maintenance of the invoice management solution.',
       },
     },

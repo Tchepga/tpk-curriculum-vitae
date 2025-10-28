@@ -28,7 +28,8 @@
   "hobbies": {
     "title": "Loisirs",
     "football": "Football",
-    "videogames": "Jeux vidéos"
+    "videogames": "Jeux vidéos",
+    "openSource": "Open Source"
   },
   "experience": {
     "title": "Expérience professionnelle",
