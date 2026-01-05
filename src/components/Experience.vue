@@ -68,16 +68,16 @@ const jobs: Job[] = [
       company: 'Luxair, Munsbach',
       period: 'nov. 2021 - présent',
       description:
-        'Le poste consiste à maintenir plusieurs applications web de l\'équipe Scrum de Luxair et de rajouter de nouvelles fonctions',
+        'Le poste consiste à maintenir plusieurs applications web de l\'équipe Scrum de Luxair et de rajouter de nouvelles fonctions. Maintenance de l\'API du booking engine booking.luxairtours développée en Symfony, qui agit comme une passerelle et agrégation de plusieurs autres API.',
       responsibilities: [
+        'Maintenance de l\'API du booking engine booking.luxairtours (Symfony)',
         'Responsable de la mise en production des applications',
         'Intégration et mise en œuvre des web components',
-        'Migration des composants vers des librairies modernes',
         "Intégration et mise en œuvre d'API",
         'Analyse et revue des tickets',
       ],
-      keywords: ['Monorepo', 'web hook', 'web component', 'approche DDD', 'scripting'],
-      technologies: 'Angular 12+, Node.js, TypeScript, Nx, Drupal, PHP 7.2+, Azure DevOps, GitLab',
+      keywords: ['API Gateway', 'Symfony', 'PHP', 'approche DDD'],
+      technologies: 'PHP, Symfony, Vue.js, Twig, Angular 12+, Node.js, TypeScript, Nx, Drupal, Azure DevOps, GitLab',
       sector: 'Public, transport',
     },
     en: {
@@ -85,23 +85,23 @@ const jobs: Job[] = [
       company: 'Luxair, Munsbach',
       period: 'nov. 2021 - present',
       description:
-        'The position consists of maintaining several web applications of the company and adding new functions defined by the project manager.',
+        'The position consists of maintaining several web applications of the Luxair Scrum team and adding new functions. Maintenance of the booking.luxairtours booking engine API developed in Symfony, which acts as a gateway and aggregation of several other APIs.',
       responsibilities: [
+        'Maintenance of the booking.luxairtours booking engine API (Symfony)',
         'Responsible for the deployment of the applications',
         'Integration and implementation of web components',
-        'Migration of components to modern libraries',
         'Integration and implementation of APIs',
         'Analysis and review of tickets',
       ],
-      keywords: ['Monorepo', 'web hook', 'web component', 'approche DDD', 'scripting'],
-      technologies: 'Angular 12+, Node.js, TypeScript, Nx, Drupal, PHP 7.2+, Azure DevOps, GitLab',
+      keywords: ['API Gateway', 'Symfony', 'PHP', 'DDD approach'],
+      technologies: 'PHP, Symfony, Vue.js, Twig, Angular 12+, Node.js, TypeScript, Nx, Drupal, Azure DevOps, GitLab',
       sector: 'Public, transport',
     },
   },
   {
     fr: {
       title: 'Développeur Java',
-      company: 'Ministère des Transports / CTE (Tachygraphe)',
+      company: 'Ministère des Transports / CTIE (Tachygraphe)',
       period: 'Mars 2021 - Octobre 2021',
       duration: '150H/J',
       description:
@@ -119,7 +119,7 @@ const jobs: Job[] = [
     },
     en: {
       title: 'Java developer',
-      company: 'Ministry of Transport / CTE (Tachygraphe)',
+      company: 'Ministry of Transport / CTIE (Tachygraphe)',
       period: 'Mars 2021 - Octobre 2021',
       duration: '150H/J',
       description:
