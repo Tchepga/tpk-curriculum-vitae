@@ -40,8 +40,8 @@ const activities: {
     },
     {
       fr: {
-        title: 'Responsable technique Tawatawa',
-        link: 'https://tawadelivery.cm',
+        title: 'Responsable technique Coliscore',
+        link: 'https://coliscore.cm/',
         description: 'Plateforme de livraison et suivi des commandes de la société Tawa Delivery.',
       },
       en: {
