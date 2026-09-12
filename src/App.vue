@@ -5,8 +5,10 @@ import Skills from './components/Skills.vue'
 import Experience from './components/Experience.vue'
 import Education from './components/Education.vue'
 import Activities from './components/Activities.vue'
+import { useSeo } from './composables/useSeo'
 
 const { t, locale } = useI18n()
+useSeo()
 
 const toggleLanguage = () => {
   locale.value = locale.value === 'fr' ? 'en' : 'fr'
@@ -18,7 +20,7 @@ const printCV = () => {
 </script>
 
 <template>
-  <div class="cv-container">
+  <div class="cv-container" itemscope itemtype="https://schema.org/Person">
     <div class="language-switch">
       <button @click="toggleLanguage">
         {{ locale === 'fr' ? 'FR' : 'EN' }}
@@ -26,10 +28,10 @@ const printCV = () => {
     </div>
     <button @click="printCV" class="print-cv-button">{{ t('printCV.button') }}</button>
     <header class="cv-header">
-      <h1>Patrick Tchepga</h1>
-      <h2 class="job-title">{{ t('header.jobTitle') }}</h2>
+      <h1 itemprop="name">Patrick Tchepga</h1>
+      <h2 class="job-title" itemprop="jobTitle">{{ t('header.jobTitle') }}</h2>
       <div class="header-divider"></div>
-      <p class="tagline">{{ t('header.tagline') }}</p>
+      <p class="tagline" itemprop="description">{{ t('header.tagline') }}</p>
     </header>
 
     <div class="cv-content">

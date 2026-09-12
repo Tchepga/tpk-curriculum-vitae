@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Patrick Tchepga — Full-Stack Developer PHP, Symfony, Angular",
+    "description": "Resume of Patrick Tchepga, full-stack developer in Luxembourg. 4+ years of experience in PHP/Symfony, Angular/TypeScript and Node.js at Luxair."
+  },
   "personal": {
     "title": "Personal Information",
     "name": "Full Name",

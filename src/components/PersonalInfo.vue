@@ -11,11 +11,15 @@ const { t } = useI18n()
     <div class="info-content">
       <div class="info-item">
         <h3>{{ t('personal.phone') }}</h3>
-        <p>+33661569987</p>
+        <p>
+          <a href="tel:+33661569987" itemprop="telephone">+33 6 61 56 99 87</a>
+        </p>
       </div>
       <div class="info-item">
         <h3>{{ t('personal.email') }}</h3>
-        <p>tchepgapatrick@yahoo.fr</p>
+        <p>
+          <a href="mailto:tchepgapatrick@yahoo.fr" itemprop="email">tchepgapatrick@yahoo.fr</a>
+        </p>
       </div>
       <LanguagesList />
     </div>
@@ -51,9 +55,24 @@ const { t } = useI18n()
   color: var(--text-color);
 }
 
+.info-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
 @media print {
   .personal-info {
     padding: 0 !important;
+  }
+
+  .info-item a {
+    color: black;
+    text-decoration: none;
   }
 }
 </style>

@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Patrick Tchepga — Développeur Full-Stack PHP, Symfony, Angular",
+    "description": "CV de Patrick Tchepga, développeur full-stack au Luxembourg. Plus de 4 ans d'expérience en PHP/Symfony, Angular/TypeScript et Node.js chez Luxair."
+  },
   "personal": {
     "title": "Données personnelles",
     "name": "Nom/Prénom",
