@@ -27,7 +27,7 @@ const categories: Record<Language, SkillCategory[]> = {
       title: 'Front-end',
       skills: [
         { name: 'Angular 12+', level: 5 },
-        { name: 'Vue.js 3', level: 2 },
+        { name: 'React.js', level: 2 },
         { name: 'TypeScript', level: 4 },
         { name: 'HTML / CSS', level: 5 },
         { name: 'Web Components', level: 4 },
@@ -66,7 +66,7 @@ const categories: Record<Language, SkillCategory[]> = {
       title: 'Front-end',
       skills: [
         { name: 'Angular 12+', level: 5 },
-        { name: 'Vue.js 3', level: 2 },
+        { name: 'React.js', level: 2 },
         { name: 'TypeScript', level: 4 },
         { name: 'HTML / CSS', level: 5 },
         { name: 'Web Components', level: 4 },
