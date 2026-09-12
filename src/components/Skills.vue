@@ -16,21 +16,21 @@ const categories: Record<Language, SkillCategory[]> = {
     {
       title: 'Back-end',
       skills: [
-        { name: 'PHP / Symfony', level: 4 },
+        { name: 'PHP / Symfony', level: 3 },
         { name: 'Java / Spring', level: 3 },
-        { name: 'Python / Django', level: 3 },
+        { name: 'Python / Django', level: 2 },
         { name: 'Node.js (exposition)', level: 2 },
-        { name: 'REST API', level: 4 },
+        { name: 'REST API', level: 2 },
       ],
     },
     {
       title: 'Front-end',
       skills: [
-        { name: 'Angular 12+', level: 4 },
-        { name: 'Vue.js 3', level: 4 },
+        { name: 'Angular 12+', level: 5 },
+        { name: 'Vue.js 3', level: 2 },
         { name: 'TypeScript', level: 4 },
-        { name: 'HTML / CSS', level: 4 },
-        { name: 'Web Components', level: 3 },
+        { name: 'HTML / CSS', level: 5 },
+        { name: 'Web Components', level: 4 },
       ],
     },
     {
@@ -55,21 +55,21 @@ const categories: Record<Language, SkillCategory[]> = {
     {
       title: 'Back-end',
       skills: [
-        { name: 'PHP / Symfony', level: 4 },
+        { name: 'PHP / Symfony', level: 3 },
         { name: 'Java / Spring', level: 3 },
-        { name: 'Python / Django', level: 3 },
+        { name: 'Python / Django', level: 2 },
         { name: 'Node.js (exposure)', level: 2 },
-        { name: 'REST API', level: 4 },
+        { name: 'REST API', level: 2 },
       ],
     },
     {
       title: 'Front-end',
       skills: [
-        { name: 'Angular 12+', level: 4 },
-        { name: 'Vue.js 3', level: 4 },
+        { name: 'Angular 12+', level: 5 },
+        { name: 'Vue.js 3', level: 2 },
         { name: 'TypeScript', level: 4 },
-        { name: 'HTML / CSS', level: 4 },
-        { name: 'Web Components', level: 3 },
+        { name: 'HTML / CSS', level: 5 },
+        { name: 'Web Components', level: 4 },
       ],
     },
     {
