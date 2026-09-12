@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import PersonalInfo from './components/PersonalInfo.vue'
+import Skills from './components/Skills.vue'
 import Experience from './components/Experience.vue'
 import Education from './components/Education.vue'
 import Activities from './components/Activities.vue'
@@ -36,6 +37,7 @@ const printCV = () => {
         <PersonalInfo />
       </div>
       <main class="cv-main">
+        <Skills />
         <Experience />
         <Education />
         <Activities />

@@ -44,7 +44,7 @@
         "description": "The position involves maintaining several company web applications of Luxair Scrum Team and adding new features defined by the project manager."
       },
       "lusis": {
-        "title": "Java Developer",
+        "title": "Full-stack Java/Vue.js Developer",
         "company": "Lusis, Roeser, Luxembourg",
         "period": "Mar 2021 - Oct 2021",
         "description": "The position involves setting up APIs and front-end for a taxpayer declaration and transport card management application for CTIE."
@@ -52,9 +52,9 @@
     }
   },
   "header": {
-    "jobTitle": "Full-Stack Developer",
-    "tagline": "Full-Stack Developer with solid experience in web application design and development, I am motivated to join a dynamic team to create innovative solutions.",
-    "jobSearch": "Seeking new opportunities to contribute to innovative projects as a Full-Stack Developer"
+    "jobTitle": "Full-Stack Developer — Internal Node.js Application",
+    "tagline": "Full-Stack Developer with 4+ years of experience in PHP/Symfony and Angular/TypeScript at Luxair, I work daily in an Nx environment alongside Node.js. Strong in REST API design, TypeScript front-end architecture and web service integration, I am motivated to deepen my Node.js back-end expertise through this internal opportunity.",
+    "jobSearch": "Internal application for Full-Stack Node.js Developer position."
   },
   "activities": {
     "title": "Activities",

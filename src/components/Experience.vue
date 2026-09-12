@@ -64,7 +64,7 @@ interface Job {
 const jobs: Job[] = [
   {
     fr: {
-      title: 'Développeur full-stack php/angular',
+      title: 'Développeur Full-Stack PHP / Angular',
       company: 'Luxair, Munsbach',
       period: 'nov. 2021 - présent',
       description:
@@ -81,7 +81,7 @@ const jobs: Job[] = [
       sector: 'Public, transport',
     },
     en: {
-      title: 'Full-stack php/angular developer',
+      title: 'Full-Stack PHP / Angular Developer',
       company: 'Luxair, Munsbach',
       period: 'nov. 2021 - present',
       description:
@@ -100,8 +100,8 @@ const jobs: Job[] = [
   },
   {
     fr: {
-      title: 'Développeur Java',
-      company: 'Ministère des Transports / CTIE (Tachygraphe)',
+      title: 'Développeur full-stack Java/Vue.js',
+      company: 'Lusis, Roeser, Luxembourg - Ministère des Transports / CTIE (Tachygraphe)',
       period: 'Mars 2021 - Octobre 2021',
       duration: '150H/J',
       description:
@@ -118,8 +118,8 @@ const jobs: Job[] = [
       sector: 'Public, transport',
     },
     en: {
-      title: 'Java developer',
-      company: 'Ministry of Transport / CTIE (Tachygraphe)',
+      title: 'Full-stack Java/Vue.js developer',
+      company: 'Lusis, Roeser, Luxembourg - Ministry of Transport / CTIE (Tachygraphe)',
       period: 'Mars 2021 - Octobre 2021',
       duration: '150H/J',
       description:

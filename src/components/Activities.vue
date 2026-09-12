@@ -81,6 +81,13 @@ const activities: {
             {{ activity[locale as Language].link }}
           </a>
           <p>{{ activity[locale as Language].description }}</p>
+          <div v-if="activity[locale as Language].keywords?.length" class="activity-keywords">
+            <span
+              v-for="(kw, ki) in activity[locale as Language].keywords"
+              :key="ki"
+              class="activity-keyword"
+            >{{ kw }}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -103,7 +110,6 @@ const activities: {
 <style scoped>
 .activities {
   padding: 1rem;
-  margin-top: 2rem;
   @media print {
     padding: 0;
   }
@@ -160,6 +166,22 @@ const activities: {
   color: var(--text-color);
   font-size: 0.9rem;
   line-height: 1.5;
+}
+
+.activity-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.activity-keyword {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.15rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
 .travel-list {

@@ -70,7 +70,6 @@ const education: Education[] = [
 <style scoped>
 .education {
   padding: 1rem;
-  margin-top: 2rem;
 }
 
 .education-item {
