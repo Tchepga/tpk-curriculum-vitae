@@ -13,14 +13,14 @@
       <div class="sector">{{ job.sector }}</div>
       <p class="description">{{ job.description }}</p>
 
-      <div v-if="job.responsibilities" class="responsibilities">
+      <div v-if="job.responsibilities?.length" class="responsibilities">
         <h4>{{ t('experience.responsibilities') }}</h4>
         <ul>
           <li v-for="(resp, idx) in job.responsibilities" :key="idx">{{ resp }}</li>
         </ul>
       </div>
 
-      <div v-if="job.keywords" class="keywords">
+      <div v-if="job.keywords?.length" class="keywords">
         <h4>{{ t('experience.keywords') }}</h4>
         <div class="keyword-list">
           <span v-for="(keyword, idx) in job.keywords" :key="idx" class="keyword">
@@ -50,7 +50,7 @@ interface JobContent {
   company: string
   period: string
   description: string
-  responsibilities: string[]
+  responsibilities?: string[]
   keywords?: string[]
   technologies: string
   sector: string
@@ -67,72 +67,86 @@ const jobs: Job[] = [
       title: 'Développeur Full-Stack PHP / Angular',
       company: 'Luxair, Munsbach',
       period: 'nov. 2021 - présent',
+      duration: '~5 ans',
       description:
-        'Le poste consiste à maintenir plusieurs applications web de l\'équipe Scrum de Luxair et à ajouter de nouvelles fonctionnalités. Maintenance de l\'API du booking engine booking.luxairtours développée en Symfony, qui agit comme une passerelle et agrégation de plusieurs autres API. Développement de CMS avec Drupal.',
+        "Au sein de l'équipe Scrum Luxair, je développe et maintiens les applications web de la compagnie et de Luxairtours. Périmètre principal : l'API Symfony du booking engine booking.luxairtours, qui agrège plusieurs services externes, les interfaces Angular/TypeScript et les CMS Drupal destinés aux équipes métier.",
       responsibilities: [
-        'Maintenance de l\'API du booking engine booking.luxairtours (Symfony)',
+        "Conception et maintenance de l'API du booking engine booking.luxairtours (Symfony), passerelle d'agrégation de plusieurs API",
+        'Développement front-end Angular / TypeScript et intégration de web components (micro-frontend)',
         'Responsable de la mise en production des applications Luxair et Luxairtours',
-        'Intégration et mise en œuvre des web components',
-        "Intégration et mise en œuvre d'API",
-        'Développement et configuration du CMS Drupal suivant les besoins des équipes métier',
+        "Conception et intégration d'API REST dans un environnement Nx",
+        'Développement et configuration du CMS Drupal selon les besoins métier',
       ],
-      keywords: ['API Gateway', 'Symfony', 'PHP', 'approche DDD', 'Micro Frontend', 'API design', 'Docker', 'Azure', 'CI/CD'],
-      technologies: 'PHP, Symfony, Vue.js, Twig, Angular 12+, AngularJs, Node.js, TypeScript, Nx, Drupal, Docker, Azure DevOps, GitLab',
+      keywords: [
+        'API Gateway',
+        'Symfony',
+        'PHP',
+        'Angular',
+        'TypeScript',
+        'approche DDD',
+        'Micro Frontend',
+        'API design',
+        'Nx',
+        'Docker',
+        'Azure',
+        'CI/CD',
+      ],
+      technologies:
+        'PHP, Symfony, Angular 12+, AngularJS, TypeScript, Node.js, Nx, Vue.js, Twig, Drupal, Docker, Azure DevOps, GitLab',
       sector: 'Public, transport',
     },
     en: {
       title: 'Full-Stack PHP / Angular Developer',
       company: 'Luxair, Munsbach',
-      period: 'nov. 2021 - present',
+      period: 'Nov 2021 - present',
+      duration: '~5 years',
       description:
-        'The position consists of maintaining several web applications of the Luxair Scrum team and adding new features. Maintenance of the booking.luxairtours booking engine API developed in Symfony, which acts as a gateway and aggregation of several other APIs. Development of a CMS with Drupal.',
+        'Within the Luxair Scrum team, I develop and maintain the company and Luxairtours web applications. Main scope: the Symfony booking-engine API for booking.luxairtours, which aggregates several external services, Angular/TypeScript interfaces, and Drupal CMS for business teams.',
       responsibilities: [
-        'Maintenance of the booking.luxairtours booking engine API (Symfony)',
-        'Responsible for the deployment of the Luxair and Luxairtours applications',
-        'Integration and implementation of web components',
-        'Integration and implementation of APIs',
-        'Development and configuration of the Drupal CMS according to the needs of the business teams',
+        'Design and maintenance of the booking.luxairtours booking-engine API (Symfony), a gateway aggregating several APIs',
+        'Angular / TypeScript front-end development and web-component integration (micro-frontend)',
+        'Responsible for production releases of the Luxair and Luxairtours applications',
+        'REST API design and integration in an Nx environment',
+        'Drupal CMS development and configuration according to business needs',
       ],
-      keywords: ['API Gateway', 'Symfony', 'PHP', 'DDD approach', 'Micro Frontend', 'API design', 'Docker', 'Azure', 'CI/CD'],
-      technologies: 'PHP, Symfony, Vue.js, Twig, Angular 12+, AngularJs, Node.js, TypeScript, Nx, Drupal, Docker, Azure DevOps, GitLab',
+      keywords: [
+        'API Gateway',
+        'Symfony',
+        'PHP',
+        'Angular',
+        'TypeScript',
+        'DDD approach',
+        'Micro Frontend',
+        'API design',
+        'Nx',
+        'Docker',
+        'Azure',
+        'CI/CD',
+      ],
+      technologies:
+        'PHP, Symfony, Angular 12+, AngularJS, TypeScript, Node.js, Nx, Vue.js, Twig, Drupal, Docker, Azure DevOps, GitLab',
       sector: 'Public, transport',
     },
   },
   {
     fr: {
       title: 'Développeur full-stack Java/Vue.js',
-      company: 'Lusis, Roeser, Luxembourg - Ministère des Transports / CTIE (Tachygraphe)',
-      period: 'Mars 2021 - Octobre 2021',
-      duration: '150H/J',
+      company: 'Lusis, Roeser — Ministère des Transports / CTIE (Tachygraphe)',
+      period: 'mars 2021 - oct. 2021',
+      duration: '8 mois',
       description:
-        "Au sein d'une équipe de 4 personnes, développement d'une application pour le Ministère des Transports du Luxembourg sous contrat à prix fixe. L'application gère les cartes de tachygraphe utilisées dans le transport de marchandises et de passagers.",
-      responsibilities: [
-        'Analyse et développement back-end avec Java 8',
-        'Analyse et développement front-end avec Vue.js en TypeScript',
-        'Développement de services Web REST et SOAP',
-        'Création et configuration de modules Maven',
-        'Tests fonctionnels',
-      ],
-      keywords: [],
-      technologies: 'VUE-JS, Maven, Java 8, REST, SOAP, DB2, Gitlab',
+        "Dans une équipe de 4 personnes, développement d'une application de gestion des cartes de tachygraphe pour le Ministère des Transports du Luxembourg (REST, SOAP, Vue.js / TypeScript).",
+      technologies: 'Java 8, Vue.js, TypeScript, Maven, REST, SOAP, DB2, GitLab',
       sector: 'Public, transport',
     },
     en: {
       title: 'Full-stack Java/Vue.js developer',
-      company: 'Lusis, Roeser, Luxembourg - Ministry of Transport / CTIE (Tachygraphe)',
-      period: 'Mars 2021 - Octobre 2021',
-      duration: '150H/J',
+      company: 'Lusis, Roeser — Ministry of Transport / CTIE (Tachograph)',
+      period: 'Mar 2021 - Oct 2021',
+      duration: '8 months',
       description:
-        'In a team of 4 people, development of an application for the Ministry of Transport of Luxembourg under a fixed price contract. The application manages the tachygraphe cards used in the transport of goods and passengers.',
-      responsibilities: [
-        'Analysis and development of back-end with Java 8',
-        'Analysis and development of front-end with Vue.js in TypeScript',
-        'Development of Web REST and SOAP services',
-        'Creation and configuration of Maven modules',
-        'Functional tests',
-      ],
-      keywords: [],
-      technologies: 'VUE-JS, Maven, Java 8, REST, SOAP, DB2, Gitlab',
+        'In a team of 4, development of a tachograph-card management application for the Luxembourg Ministry of Transport (REST, SOAP, Vue.js / TypeScript).',
+      technologies: 'Java 8, Vue.js, TypeScript, Maven, REST, SOAP, DB2, GitLab',
       sector: 'Public, transport',
     },
   },
@@ -140,69 +154,39 @@ const jobs: Job[] = [
     fr: {
       title: 'Développeur Junior Python',
       company: 'LDE - Poplab',
-      period: 'Juin 2020 - Mars 2021',
-      duration: '180H/J',
+      period: 'juin 2020 - mars 2021',
       description:
-        "Au sein d'une équipe de 7 personnes, développement en mode Agile d'une application d'assistance pédagogique pour les écoles primaires et secondaires, ainsi qu'une application de gestion et de partage de documents numériques.",
-      responsibilities: [
-        'Analyse et développement back-end avec Python 3',
-        'Analyse et développement front-end avec Vue.js en JavaScript',
-        'Développement de services Web REST',
-        'Tests fonctionnels avec Django Test',
-        "Tests d'intégration avec Selenium",
-      ],
-      technologies: 'Python 3, Django, Selenium, Vuejs, Postgres',
+        "Développement Agile d'applications d'assistance pédagogique et de partage de documents (Python/Django, Vue.js).",
+      technologies: 'Python 3, Django, Vue.js, PostgreSQL, Selenium',
       sector: 'Éducation',
     },
     en: {
       title: 'Junior Python developer',
       company: 'LDE - Poplab',
-      period: 'Juin 2020 - Mars 2021',
-      duration: '180H/J',
+      period: 'Jun 2020 - Mar 2021',
       description:
-        'In a team of 7 people, development in Agile mode of an educational assistance application for primary and secondary schools, as well as an application for managing and sharing digital documents.',
-      responsibilities: [
-        'Analysis and development of back-end with Python 3',
-        'Analysis and development of front-end with Vue.js in JavaScript',
-        'Development of Web REST services',
-        'Functional tests with Django Test',
-        'Integration tests with Selenium',
-      ],
-      technologies: 'Python 3, Django, Selenium, Vuejs, Postgres',
+        'Agile development of educational-support and document-sharing applications (Python/Django, Vue.js).',
+      technologies: 'Python 3, Django, Vue.js, PostgreSQL, Selenium',
       sector: 'Education',
     },
   },
   {
     fr: {
-      title: 'Stagiaire Développeur C++',
+      title: 'Stagiaire développeur C++',
       company: 'DeltaCAD - DeltaMesh',
-      period: 'Septembre 2019 - Février 2020',
-      duration: '120 H/J',
+      period: 'sept. 2019 - févr. 2020',
       description:
-        'Internship realized in the framework of the Master in software engineering in a team of 4 people. Integration of a C++ library for 3D meshing and implementation of a 3D object viewer.',
-      responsibilities: [
-        'Revue de la littérature sur les outils de maillage 3D existants',
-        'Development of plugins for the mesh algorithms',
-        'Implementation of the UI',
-        'Algorithm optimization',
-      ],
-      technologies: 'C++, QT, Python, Paraview, CMake, SVN',
-      sector: 'Industrial',
+        "Stage de Master : intégration d'une bibliothèque C++ de maillage 3D et d'un visualiseur d'objets 3D.",
+      technologies: 'C++, Qt, Python, ParaView, CMake, SVN',
+      sector: 'Industrie',
     },
     en: {
       title: 'C++ developer intern',
       company: 'DeltaCAD - DeltaMesh',
-      period: 'September 2019 - February 2020',
-      duration: '120 H/J',
+      period: 'Sep 2019 - Feb 2020',
       description:
-        'Internship realized in the framework of the Master in software engineering in a team of 4 people. Integration of a C++ library for 3D meshing and implementation of a 3D object viewer.',
-      responsibilities: [
-        'Review of the literature on existing 3D meshing tools',
-        'Development of plugins for the mesh algorithms',
-        'Implementation of the UI',
-        'Algorithm optimization',
-      ],
-      technologies: 'C++, QT, Python, Paraview, CMake, SVN',
+        'Master internship: integration of a C++ 3D-meshing library and a 3D object viewer.',
+      technologies: 'C++, Qt, Python, ParaView, CMake, SVN',
       sector: 'Industrial',
     },
   },
