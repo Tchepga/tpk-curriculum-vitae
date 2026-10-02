@@ -37,7 +37,31 @@ const activities: {
         description:
           'Active participation in the Mongulu collective, an African tech community. Requirements analysis and stakeholder coordination for technical solution implementation.',
       },
-    }
+    },
+    {
+      fr: {
+        title: 'Responsable technique Coliscore',
+        link: 'https://coliscore.cm/',
+        description: 'Comparateur de livraison de colis : conception et suivi technique de la plateforme.',
+      },
+      en: {
+        title: 'Technical Lead at Coliscore',
+        link: 'https://coliscore.cm/',
+        description: 'Parcel delivery comparator: technical design and ownership of the platform.',
+      },
+    },
+    {
+      fr: {
+        title: 'Responsable technique Manage Invoice',
+        link: 'https://manage-invoice.devcoorp.fr/',
+        description: 'Développement et maintenance de la solution de gestion de factures.',
+      },
+      en: {
+        title: 'Technical Lead at Manage Invoice',
+        link: 'https://manage-invoice.devcoorp.fr/',
+        description: 'Development and maintenance of the invoice management solution.',
+      },
+    },
   ],
   travel: {
     fr: [

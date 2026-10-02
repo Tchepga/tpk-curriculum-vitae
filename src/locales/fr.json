@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "Patrick Tchepga — Développeur Full-Stack PHP, Symfony, Angular",
-    "description": "CV de Patrick Tchepga, développeur full-stack au Luxembourg. Plus de 4 ans d'expérience en PHP/Symfony, Angular/TypeScript et Node.js chez Luxair."
+    "description": "CV de Patrick Tchepga, développeur full-stack au Luxembourg. Près de 5 ans d'expérience en PHP/Symfony et Angular/TypeScript chez Luxair."
   },
   "personal": {
     "title": "Données personnelles",
@@ -42,23 +42,23 @@
     "environment": "Environnement technique",
     "jobs": {
       "luxair": {
-        "title": "Développeur full-stack php/angular",
+        "title": "Développeur Full-Stack PHP / Angular",
         "company": "Luxair, Munsbach",
         "period": "nov. 2021 - présent",
-        "description": "Le poste consiste à maintenir plusieurs applications web de la compagnie et de rajouter de nouvelles fonctions définies par le chef de projet."
+        "description": "Développement et maintenance des applications web Luxair et Luxairtours : API Symfony du booking engine, interfaces Angular/TypeScript et CMS Drupal."
       },
       "lusis": {
-        "title": "Développeur Java",
+        "title": "Développeur full-stack Java/Vue.js",
         "company": "Lusis, Roeser, Luxembourg",
         "period": "mars 2021 - oct. 2021",
-        "description": "Le poste consiste à mettre en place les API et le front-end pour une application de gestion de déclaration des contribuables et des cartes de transport pour le CTIE."
+        "description": "Application de gestion des cartes de tachygraphe pour le Ministère des Transports / CTIE."
       }
     }
   },
   "header": {
-    "jobTitle": "Développeur Full-Stack — Candidature interne Node.js",
-    "tagline": "Développeur Full-Stack avec plus de 4 ans d'expérience en PHP/Symfony et Angular/TypeScript au sein de Luxair, je travaille quotidiennement dans un environnement Nx avec Node.js. Solide en conception d'API REST, en architecture front-end TypeScript et en intégration de services web, je suis motivé à approfondir mon expertise Node.js côté back-end dans le cadre de cette opportunité interne.",
-    "jobSearch": "Candidature interne au poste de Développeur Full-Stack Node.js."
+    "jobTitle": "Développeur Full-Stack — PHP, Symfony, Angular",
+    "tagline": "Développeur Full-Stack avec près de 5 ans d'expérience chez Luxair. Je conçois et maintiens des API REST en PHP/Symfony, des interfaces Angular/TypeScript et des intégrations dans un environnement Nx. Solide en architecture front-end, en conception d'API et en mise en production d'applications métier.",
+    "jobSearch": "Développeur Full-Stack PHP / Symfony / Angular."
   },
   "activities": {
     "title": "Activités",
