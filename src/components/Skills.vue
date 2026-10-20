@@ -16,7 +16,7 @@ const categories: Record<Language, SkillCategory[]> = {
     {
       title: 'Back-end',
       skills: [
-        { name: 'PHP / Symfony', level: 4 },
+        { name: 'PHP / Symfony', level: 3 },
         { name: 'REST API', level: 4 },
         { name: 'Node.js', level: 3 },
         { name: 'Java / Spring Boot', level: 2 },
@@ -55,7 +55,7 @@ const categories: Record<Language, SkillCategory[]> = {
     {
       title: 'Back-end',
       skills: [
-        { name: 'PHP / Symfony', level: 4 },
+        { name: 'PHP / Symfony', level: 3 },
         { name: 'REST API', level: 4 },
         { name: 'Node.js', level: 3 },
         { name: 'Java / Spring Boot', level: 2 },

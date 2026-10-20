@@ -6,7 +6,7 @@ const { t, locale } = useI18n()
 type Language = 'fr' | 'en'
 type ActivityContent = {
   title: string
-  link?: string
+  link: string
   description: string
   keywords?: string[]
 }
@@ -15,13 +15,8 @@ type Activity = {
   [key in Language]: ActivityContent
 }
 
-type TravelList = {
-  [key in Language]: string[]
-}
-
 const activities: {
   technical: Activity[]
-  travel: TravelList
 } = {
   technical: [
     {
@@ -40,16 +35,6 @@ const activities: {
     },
     {
       fr: {
-        title: 'Responsable technique Coliscore',
-        description: 'Comparateur de livraison de colis : conception et suivi technique de la plateforme.',
-      },
-      en: {
-        title: 'Technical Lead at Coliscore',
-        description: 'Parcel delivery comparator: technical design and ownership of the platform.',
-      },
-    },
-    {
-      fr: {
         title: 'Responsable technique Manage Invoice',
         link: 'https://manage-invoice.devcoorp.fr/',
         description: 'Développement et maintenance de la solution de gestion de factures.',
@@ -61,32 +46,6 @@ const activities: {
       },
     },
   ],
-  travel: {
-    fr: [
-      'France',
-      'Luxembourg',
-      'États-Unis',
-      "Côte d'Ivoire",
-      'Gabon',
-      'Belgique',
-      'Allemagne',
-      'Italie',
-      'Cameroun',
-      'Espagne',
-    ],
-    en: [
-      'France',
-      'Luxembourg',
-      'United States',
-      'Ivory Coast',
-      'Gabon',
-      'Belgium',
-      'Germany',
-      'Italy',
-      'Cameroon',
-      'Spain',
-    ],
-  },
 }
 </script>
 
@@ -99,9 +58,7 @@ const activities: {
       <div class="technical-activities">
         <div v-for="(activity, index) in activities.technical" :key="index" class="activity-item">
           <h4>{{ activity[locale as Language].title }}</h4>
-          <a
-            v-if="activity[locale as Language].link"
-            :href="activity[locale as Language].link" target="_blank" rel="noopener noreferrer">
+          <a :href="activity[locale as Language].link" target="_blank" rel="noopener noreferrer">
             {{ activity[locale as Language].link }}
           </a>
           <p>{{ activity[locale as Language].description }}</p>
@@ -113,19 +70,6 @@ const activities: {
             >{{ kw }}</span>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="activities-section">
-      <h3>{{ t('activities.travel.title') }}</h3>
-      <div class="travel-list">
-        <span
-          v-for="(country, index) in activities.travel[locale as Language]"
-          :key="index"
-          class="country"
-        >
-          {{ country }}
-        </span>
       </div>
     </div>
   </section>
@@ -208,17 +152,5 @@ const activities: {
   font-weight: 500;
 }
 
-.travel-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-}
 
-.country {
-  background-color: var(--light-bg);
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  color: var(--text-color);
-}
 </style>

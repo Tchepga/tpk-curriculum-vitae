@@ -71,30 +71,11 @@
           "description": "Participation active au sein du collectif Mongulu, une communauté tech africaine"
         },
         {
-          "title": "Responsable technique Coliscore",
-          "description": "Comparateur de livraison de colis"
-        },
-        {
           "title": "Responsable technique Manage Invoice",
           "link": "https://manage-invoice.devcoorp.fr/",
           "description": "Développement et maintenance de la solution de gestion de factures"
         }
       ]
-    },
-    "travel": {
-      "title": "Voyages",
-      "countries": {
-        "france": "France",
-        "luxembourg": "Luxembourg",
-        "usa": "États-Unis",
-        "ivoryCoast": "Côte d'Ivoire",
-        "gabon": "Gabon",
-        "belgium": "Belgique",
-        "germany": "Allemagne",
-        "italy": "Italie",
-        "cameroon": "Cameroun",
-        "spain": "Espagne"
-      }
     }
   },
   "education": {
