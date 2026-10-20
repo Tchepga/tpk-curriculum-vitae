@@ -24,7 +24,7 @@ const activities: {
         title: 'Membre du collectif Mongulu',
         link: 'https://www.mongulu.cm/',
         description:
-          'Participation active au sein du collectif Mongulu, une communauté tech camerounaise. Mise en place des solutions digitales principale dans le domaine associatif.',
+          'Participation active au sein du collectif Mongulu, une communauté tech camerounaise. Mise en place des principales solutions digitales dans le domaine associatif.',
       },
       en: {
         title: 'Member of Mongulu Collective',

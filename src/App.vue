@@ -194,8 +194,53 @@ const printCV = () => {
 @media print {
   /* Configuration de la page */
   @page {
-    margin: 2.5cm;
+    margin: 1.5cm;
     size: A4;
+  }
+  /* Imprime les couleurs (pastilles de niveau, mots-clés) même sans « Graphiques d'arrière-plan » */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  html,
+  body {
+    background: white !important;
+  }
+  /* Version imprimée plus compacte */
+  html {
+    font-size: 13px;
+  }
+  .cv-header {
+    margin-bottom: 1rem;
+  }
+  .experience,
+  .education,
+  .skills,
+  .activities,
+  .personal-info {
+    padding: 0.5rem 0 !important;
+  }
+  .experience-item {
+    padding-bottom: 0.8rem !important;
+    margin-bottom: 0.8rem;
+  }
+  /* Pas de titre orphelin en bas de page */
+  h2,
+  h3,
+  h4,
+  .job-header,
+  .company,
+  .sector {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  /* Ne pas couper un bloc entre deux pages */
+  .education-item,
+  .activity-item,
+  .skill-category,
+  .personal-info {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
   .cv-toolbar {
     display: none !important;
