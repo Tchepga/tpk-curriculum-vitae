@@ -21,12 +21,17 @@ const printCV = () => {
 
 <template>
   <div class="cv-container" itemscope itemtype="https://schema.org/Person">
-    <div class="language-switch">
-      <button @click="toggleLanguage">
-        {{ locale === 'fr' ? 'FR' : 'EN' }}
-      </button>
+    <div class="cv-toolbar">
+      <button @click="printCV" class="print-cv-button">{{ t('printCV.button') }}</button>
+      <div class="language-switch">
+        <button
+          @click="toggleLanguage"
+          :aria-label="locale === 'fr' ? 'Switch to English' : 'Passer en français'"
+        >
+          {{ locale === 'fr' ? 'EN' : 'FR' }}
+        </button>
+      </div>
     </div>
-    <button @click="printCV" class="print-cv-button">{{ t('printCV.button') }}</button>
     <header class="cv-header">
       <h1 itemprop="name">Patrick Tchepga</h1>
       <h2 class="job-title" itemprop="jobTitle">{{ t('header.jobTitle') }}</h2>
@@ -139,10 +144,22 @@ const printCV = () => {
   }
 }
 
-.language-switch {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+.cv-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .cv-toolbar {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    margin-bottom: 0;
+  }
 }
 
 .language-switch button {
@@ -163,21 +180,14 @@ const printCV = () => {
 }
 
 .print-cv-button {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
   background-color: var(--primary-color);
   color: white;
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-color);
   border-radius: 4px;
   cursor: pointer;
-  height: min-content;
-}
-@media screen and (min-width: 768px) {
-  .print-cv-button {
-    top: 1rem;
-    right: 5rem;
-  }
 }
 
 /* Styles d'impression */
@@ -187,8 +197,7 @@ const printCV = () => {
     margin: 2.5cm;
     size: A4;
   }
-  .language-switch,
-  .print-cv-button {
+  .cv-toolbar {
     display: none !important;
   }
   /* Assurer que les liens sont lisibles en noir */
