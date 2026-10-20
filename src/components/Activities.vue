@@ -6,7 +6,7 @@ const { t, locale } = useI18n()
 type Language = 'fr' | 'en'
 type ActivityContent = {
   title: string
-  link: string
+  link?: string
   description: string
   keywords?: string[]
 }
@@ -41,12 +41,10 @@ const activities: {
     {
       fr: {
         title: 'Responsable technique Coliscore',
-        link: 'https://coliscore.cm/',
         description: 'Comparateur de livraison de colis : conception et suivi technique de la plateforme.',
       },
       en: {
         title: 'Technical Lead at Coliscore',
-        link: 'https://coliscore.cm/',
         description: 'Parcel delivery comparator: technical design and ownership of the platform.',
       },
     },
@@ -101,7 +99,9 @@ const activities: {
       <div class="technical-activities">
         <div v-for="(activity, index) in activities.technical" :key="index" class="activity-item">
           <h4>{{ activity[locale as Language].title }}</h4>
-          <a :href="activity[locale as Language].link" target="_blank" rel="noopener noreferrer">
+          <a
+            v-if="activity[locale as Language].link"
+            :href="activity[locale as Language].link" target="_blank" rel="noopener noreferrer">
             {{ activity[locale as Language].link }}
           </a>
           <p>{{ activity[locale as Language].description }}</p>
