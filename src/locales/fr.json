@@ -57,7 +57,7 @@
   },
   "header": {
     "jobTitle": "Développeur Full-Stack — PHP, Symfony, Angular",
-    "tagline": "Développeur Full-Stack avec près de 5 ans d'expérience chez Luxair. Je conçois et maintiens des API REST en PHP/Symfony, des interfaces Angular/TypeScript et des intégrations dans un environnement Nx. Solide en architecture front-end, en conception d'API et en mise en production d'applications métier.",
+    "tagline": "Ingénieur full-stack avec 6 ans d'expérience, dont 5 chez Luxair sur le moteur de réservation de Luxairtours. Je conçois des interfaces Angular/TypeScript dans un monorepo Nx structuré en DDD et des API d'agrégation en PHP/Symfony, et je pilote leurs mises en production. Je souhaite mettre cette expérience des systèmes critiques au service de la finance.",
     "jobSearch": "Développeur Full-Stack PHP / Symfony / Angular."
   },
   "activities": {
